@@ -6,7 +6,9 @@
 let
   inherit (flake) self;
   # Import VSCode extensions
-  vscodeExtensions = import (self + /modules/home-manager/vscode/vscode-extensions.nix) { inherit pkgs; };
+  vscodeExtensions = import (self + /modules/home-manager/vscode/vscode-extensions.nix) {
+    inherit pkgs;
+  };
 
   # Build a standalone VSCode package with extensions
   mkVSCode =

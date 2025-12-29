@@ -1,4 +1,9 @@
-{ pkgs, self, config, ... }:
+{
+  pkgs,
+  self,
+  config,
+  ...
+}:
 {
   programs.vscode = {
     enable = true;

@@ -4,7 +4,6 @@ with pkgs.vscode-marketplace;
 let
   # Profiles organized into logical groups for easy access
   profiles = {
-
     general = {
       core = [
         aaron-bond.better-comments # There is a fork but doesn't work as well still.
@@ -49,9 +48,9 @@ let
       testing = [ ms-vscode.test-adapter-converter ];
 
       themes = [
-        # dracula-theme.theme-dracula
-        # pkief.material-icon-theme
-        # pkief.material-product-icons
+        dracula-theme.theme-dracula
+        pkief.material-icon-theme
+        pkief.material-product-icons
       ];
 
       ui-ux = [
