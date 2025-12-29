@@ -1,7 +1,8 @@
 { self, config }:
 let
-  # Dracula Color Palette
-  # https://draculatheme.com/contribute
+  # Import dracula color palette from modular extensions
+  # Note: We still define it here for backwards compatibility with existing settings
+  # that reference the dracula palette, but theme settings are now in extensions/dracula-theme
   dracula = {
     background = "#282a36";
     currentLine = "#44475a";
@@ -20,18 +21,7 @@ let
   };
 
   profiles = {
-    themes = {
-      "material-icon-theme.activeIconPack" = "react";
-      "material-icon-theme.files.color" = "#90a4ae";
-      "material-icon-theme.hidesExplorerArrows" = true;
-      "material-icon-theme.opacity" = 1;
-      "workbench.colorCustomizations" = {
-        "titleBar.activeBackground" = "#692E33";
-      };
-      "workbench.colorTheme" = "Dracula Theme";
-      "workbench.iconTheme" = "material-icon-theme";
-      "workbench.productIconTheme" = "material-product-icons";
-    };
+    # themes moved to extensions/dracula-theme module
 
     general = {
       "chat.mcp.gallery.enabled" = true;
@@ -616,7 +606,7 @@ let
   };
 
   selected = with profiles; [
-    themes
+    # themes # Moved to extensions/dracula-theme module
     general
     fonts
     shell

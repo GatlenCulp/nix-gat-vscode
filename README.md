@@ -35,6 +35,8 @@ Note: Duplicated from nvix repository
 - **Easy Customization:** Import only what you want, or override settings in `config.nvix`.
 - **Flake Native:** Built for the modern Nix ecosystem. -->
 
+Note: Will have to use the nixpkgs overlay available in this flake for it to work `flake.overlays.default`. Which is basically just `nix-vscode-extensions.overlays.default`
+
 ## Quickstart
 
 Try VSCode with this configuration instantly (no install required):

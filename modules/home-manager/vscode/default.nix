@@ -2,16 +2,23 @@
   pkgs,
   self,
   config,
+  lib,
   ...
 }:
+let
+  # Import modular extensions
+  extensionModules = import ../../../extensions { inherit pkgs lib; };
+in
 {
   programs.vscode = {
     enable = true;
     # enableMcpIntegration = true; # Error?
     mutableExtensionsDir = true;
     profiles.default = {
-      extensions = import ./vscode-extensions.nix { inherit pkgs; };
-      userSettings = import ./vscode-settings.nix { inherit self config; };
+      # Combine modular extensions with legacy extensions
+      extensions = extensionModules.extensions ++ (import ./vscode-extensions.nix { inherit pkgs; });
+      # Combine modular settings with legacy settings
+      userSettings = extensionModules.settings // (import ./vscode-settings.nix { inherit self config; });
       keybindings = [
         {
           key = "cmd+l";

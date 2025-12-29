@@ -47,11 +47,7 @@ let
 
       testing = [ ms-vscode.test-adapter-converter ];
 
-      themes = [
-        dracula-theme.theme-dracula
-        pkief.material-icon-theme
-        pkief.material-product-icons
-      ];
+      # themes moved to extensions/dracula-theme module
 
       ui-ux = [
         alefragnani.bookmarks
@@ -352,7 +348,7 @@ let
     general.fonts
     general.remote
     general.testing
-    general.themes
+    # general.themes # Moved to extensions/dracula-theme module
     general.ui-ux
     general.utilities
 
