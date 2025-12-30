@@ -76,15 +76,16 @@ let
       "editor.wordWrapColumn" = 100;
       "files.associations" = {
         # Weird errors with opening vscode and it sorting.
-        # "*.env*" = "dotenv";
-        # "*.toml.tmpl" = "toml";
-        # "*Brewfile*" = "ruby";
-        # ".aliases" = "shellscript";
-        # ".bashrc" = "shellscript";
-        # ".envrc" = "shellscript";
-        # ".zshrc" = "shellscript";
-        # "flake.lock" = "json"; # I think nix-ide adds this
-        # ".env*" = "dotenv"; # I think dotenv adds this
+        "*.env*" = "dotenv";
+        "*.toml.tmpl" = "toml";
+        "*Brewfile*" = "ruby";
+        ".aliases" = "shellscript";
+        ".bashrc" = "shellscript";
+        ".envrc" = "shellscript";
+        ".zshrc" = "shellscript";
+        "flake.lock" = "json"; # I think nix-ide adds this
+        ".env*" = "dotenv"; # I think dotenv adds this
+        "*.typ" = "typst"; # Sometimes selects Django txt for some reason.
       };
       "files.autoSave" = "afterDelay";
       "files.exclude" = {
