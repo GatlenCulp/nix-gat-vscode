@@ -2,8 +2,12 @@
 let
   # Auto-import all extension modules from subdirectories
   extensionDirs =
-    with builtins;
-    filter (name: (readDir ./${name}) ? "default.nix") (attrNames (readDir ./.));
+    let
+      entries = builtins.readDir ./.;
+    in
+    builtins.filter (name:
+      entries.${name} == "directory" && (builtins.readDir ./${name}) ? "default.nix"
+    ) (builtins.attrNames entries);
 
   # Import each extension module
   extensionModules = map (dir: import ./${dir} { inherit pkgs; }) extensionDirs;
@@ -20,6 +24,7 @@ let
       draculaMod = builtins.filter (mod: mod ? dracula) extensionModules;
     in
     if draculaMod != [ ] then (builtins.head draculaMod).dracula else { };
+    
 in
 {
   extensions = allExtensions;

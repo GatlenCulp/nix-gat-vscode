@@ -52,7 +52,7 @@ let
       ui-ux = [
         alefragnani.bookmarks
         antfu.iconify
-        exodiusstudios.comment-anchors
+        # exodiusstudios.comment-anchors
         stackbreak.comment-divider
         xiaoluoboding.vscode-folder-size
         # johnpapa.vscode-peacock
@@ -201,7 +201,7 @@ let
         njpwerner.autodocstring
         rodolphebarbanneau.python-docstring-highlighter
         sbsnippets.pytorch-snippets
-        batisteo.vscode-django
+        # batisteo.vscode-django
         # ms-pyright.pyright # Redundant, anysphere has their own version
         # ms-python.vscode-pylance # Redundant, anysphere has their own version
         # twixes.pypi-assistant

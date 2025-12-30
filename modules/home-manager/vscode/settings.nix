@@ -24,6 +24,9 @@ let
     # themes moved to extensions/dracula-theme module
 
     general = {
+      "breadcrumbs.enabled" = false; # I don't use much,takes up space
+      "editor.stickyScroll.maxLineCount" = 2; # Not always very helpful, can take up a lot of space
+      "workbench.layoutControl.enabled" = false; # I don't need this, I know the shortcuts
       "chat.mcp.gallery.enabled" = true;
       "cSpell.customDictionaries" = {
         "custom-dictionary-user" = {
@@ -73,7 +76,6 @@ let
       "editor.wordWrapColumn" = 100;
       "files.associations" = {
         # Weird errors with opening vscode and it sorting.
-        # "flake.lock" = "json";
         # "*.env*" = "dotenv";
         # "*.toml.tmpl" = "toml";
         # "*Brewfile*" = "ruby";
@@ -81,7 +83,8 @@ let
         # ".bashrc" = "shellscript";
         # ".envrc" = "shellscript";
         # ".zshrc" = "shellscript";
-        # ".env*" = "dotenv";
+        # "flake.lock" = "json"; # I think nix-ide adds this
+        # ".env*" = "dotenv"; # I think dotenv adds this
       };
       "files.autoSave" = "afterDelay";
       "files.exclude" = {
@@ -329,7 +332,7 @@ let
       };
       "nix.enableLanguageServer" = true;
       # Fallback formatter
-      "nix.formatterPath" = "nixfmt";
+      # "nix.formatterPath" = "nixfmt"; # I think messes with things? not sure.
       "nix.serverPath" = "nixd";
       "nix.serverSettings" = {
         "nixd" = {
