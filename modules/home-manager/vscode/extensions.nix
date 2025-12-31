@@ -6,6 +6,7 @@ let
   profiles = {
     general = {
       core = [
+VSpaceCode.whichkey
         aaron-bond.better-comments # There is a fork but doesn't work as well still.
         alefragnani.project-manager
         ibm.output-colorizer
