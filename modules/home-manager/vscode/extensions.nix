@@ -6,7 +6,7 @@ let
   profiles = {
     general = {
       core = [
-VSpaceCode.whichkey
+        VSpaceCode.whichkey
         aaron-bond.better-comments # There is a fork but doesn't work as well still.
         alefragnani.project-manager
         ibm.output-colorizer
@@ -310,7 +310,7 @@ VSpaceCode.whichkey
 
       specialized = [
         ban.troff # troff lang, niche.
-        cweijan.vscode-office # MS Office
+        # cweijan.vscode-office # MS Office (includes Vditor markdown editor)
         editorconfig.editorconfig # niche devops tool
         humao.rest-client
         kdl-org.kdl # KDL (niche lang)

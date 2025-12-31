@@ -10,17 +10,6 @@ Note: Duplicated from nvix repository
 <td align="center">
 <img width="2000" height="0"><br>
 
-##### `"This configuration is modular by design—if you love a part of it, grab that slice, plug it into your vscode config, and roll with it!"`
-
-<!-- ![GitHub Stars](https://img.shields.io/github/stars/niksingh710/nvix?style=social) ![GitHub Forks](https://img.shields.io/github/forks/niksingh710/nvix?style=social) ![GitHub Issues](https://img.shields.io/github/issues/niksingh710/nvix) ![License: MIT](https://img.shields.io/badge/license-MIT-green) ![Nix Flake Compatible](https://img.shields.io/badge/Nix-Flake_Compatible-blue) -->
-
-<img width="2000" height="0">
-</td>
-</tbody>
-</table>
-</div>
-</p>
-
 # Gat-VSCode (Nix)
 
 <!-- Nvix is a **modular**, **powerful**, and **reproducible** Neovim configuration framework powered by [Nixvim](https://github.com/nix-community/nixvim). It leverages the Nix ecosystem to provide flexible, reliable, and highly customizable Neovim environments—whether you need a lightweight config for quick edits or a comprehensive setup for full development workflows. -->
