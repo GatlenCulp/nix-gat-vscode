@@ -281,13 +281,13 @@ let
         };
         "Gatlen-nu" = {
           "args" = [ "-l" ];
-          "color" = "terminal.ansiBlue";
+          "color" = "terminal.ansiGreen";
           "env" = {
             "value" = "\${workspaceFolder}/secrets/.env";
           };
           "icon" = "robot";
           "overrideName" = true;
-          "path" = "zsh";
+          "path" = "nu";
         };
       };
     };
