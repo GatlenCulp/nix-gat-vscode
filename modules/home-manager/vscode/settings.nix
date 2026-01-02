@@ -266,6 +266,8 @@ let
       "terminal.integrated.suggest.enabled" = true;
       "terminal.integrated.tabs.enabled" = true;
       "terminal.integrated.tabs.location" = "left";
+      "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
+      "terminal.integrated.fontSize" = 10;
       # PROFILE SETTINGS
       "terminal.integrated.defaultProfile.osx" = "Gatlen-nu";
       "terminal.integrated.profiles.osx" = {

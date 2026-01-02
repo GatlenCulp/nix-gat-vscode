@@ -6,12 +6,14 @@ let
   profiles = {
     general = {
       core = [
+        # core
         vspacecode.whichkey
-        aaron-bond.better-comments # There is a fork but doesn't work as well still.
         alefragnani.project-manager
         ibm.output-colorizer
         mohammadbaqer.better-folding
         usernamehw.errorlens
+        # other
+        aaron-bond.better-comments # There is a fork but doesn't work as well still.
         anthropic.claude-code # unfree
       ];
 
@@ -104,7 +106,7 @@ let
         streetsidesoftware.code-spell-checker
         # anysphere.remote-containers # Doesn't work on cursor
         # elagil.pre-commit-helper
-        # Postman.postman-for-vscode # Not in vscode-extensions
+        # postman.postman-for-vscode # Not in vscode-extensions
       ];
 
       git = [
@@ -113,7 +115,7 @@ let
         github.vscode-github-actions
         github.vscode-pull-request-github
         pflannery.vscode-versionlens
-        # SanjulaGanepola.github-local-actions # Not in vscode-extensions
+        # sanjulagagnepola.github-local-actions # Not in vscode-extensions
       ];
 
       security = [
@@ -243,9 +245,9 @@ let
       ];
 
       vim = [
-        vscodevim.vim
-        xadillax.viml
-        vintharas.learn-vim
+        # vscodevim.vim
+        # xadillax.viml
+        # vintharas.learn-vim
       ];
     };
 
