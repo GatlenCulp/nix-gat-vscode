@@ -19,13 +19,13 @@ in
       extensions = extensionModules.extensions ++ (import ./extensions.nix { inherit pkgs; });
       # Combine modular settings with legacy settings
       userSettings = extensionModules.settings // (import ./settings.nix { inherit self config; });
-      keybindings = [
-        {
-          key = "cmd+l";
-          command = "claude-vscode.insertAtMention";
-          when = "editorTextFocus";
-        }
-      ];
+      # keybindings = [
+      #   {
+      #     key = "cmd+l";
+      #     command = "claude-vscode.insertAtMention";
+      #     when = "editorTextFocus";
+      #   }
+      # ];
     };
   };
 }
