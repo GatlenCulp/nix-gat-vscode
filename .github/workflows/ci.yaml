@@ -27,4 +27,8 @@ jobs:
 
       - name: Build flake outputs
         run: |
-          nix build .#bare .#core --no-link
+          nix build .#default --no-link
+
+      - name: Run hermetic tests
+        run: |
+          bash tests/run-vscode.sh
