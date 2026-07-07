@@ -12,13 +12,12 @@ set -euo pipefail
 
 # Resolve repo paths relative to this script.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# TLS for the agent proxy (harmless if already set / unused for local eval).
-export NIX_SSL_CERT_FILE="${NIX_SSL_CERT_FILE:-/root/.ccr/ca-bundle.crt}"
+# NIX_SSL_CERT_FILE is honored if the caller sets it (e.g. a custom CA);
+# otherwise nix uses the system trust store — no hardcoded fallback.
 
 green() { printf '\033[0;32m%s\033[0m\n' "$1"; }
-red() { printf '\033[0;31m%s\033[0m\n' "$1"; }
+red() { printf '\033[0;31m%b\033[0m\n' "$1"; }
 
 fail() {
   red "FAIL: $1"
