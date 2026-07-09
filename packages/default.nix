@@ -5,10 +5,16 @@
 }:
 let
   inherit (flake) self;
-  # Import VSCode extensions
-  vscodeExtensions = import (self + /modules/home-manager/vscode/vscode-extensions.nix) {
+  # Import VSCode extensions the same way the Home Manager module does:
+  # modular extensions from /extensions plus the legacy flat list.
+  extensionModules = import (self + /extensions) {
+    inherit pkgs;
+    inherit (pkgs) lib;
+  };
+  legacyExtensions = import (self + /modules/home-manager/vscode/extensions.nix) {
     inherit pkgs;
   };
+  vscodeExtensions = extensionModules.extensions ++ legacyExtensions;
 
   # Build a standalone VSCode package with extensions
   mkVSCode =

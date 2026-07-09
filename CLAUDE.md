@@ -163,7 +163,7 @@ This repository uses `nixfmt-rfc-style` (RFC 166 style). A pre-commit hook enfor
 
 ## CI/CD
 
-GitHub Actions workflow (`.github/workflows/ci.yaml`) builds `bare` and `core` variants on push/PR to master. Only Linux builds are tested.
+GitHub Actions workflow (`.github/workflows/ci.yaml`) builds the `default` package (VSCode with extensions) and runs the hermetic tests (`tests/run-vscode.sh`) on push/PR to main. Only Linux builds are tested.
 
 ## Transition Notes
 
